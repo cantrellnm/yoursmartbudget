@@ -22,7 +22,7 @@ MongoDB is used for storing some user information. (Application settings, basic 
 
 ## Development
 
-When running locally, first set your environment variables in an `.env` file. You will need yarn installed to run various scripts (`npm install -g yarn`). Then run `yarn install` and `yarn build`.
+When running locally, first add your environment variables to an `.env` file in the server folder. You will need yarn installed to run various scripts (`npm install -g yarn`). Then run `yarn install` and `yarn build`.
 
 You will also need MongoDB installed and running with `mongod` before starting the server at `http://localhost:8000` with `yarn workspace server dev`.
 
