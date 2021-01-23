@@ -6,7 +6,7 @@ var mongoDB = envvar.string('DB_URI', 'mongodb://localhost:27017/dev');
 
 module.exports = () => {
   mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-  console.log('MongoDB connected at ' + mongoDB);
+  console.log('MongoDB connected');
 
   // Get Mongoose to use the global promise library
   mongoose.Promise = global.Promise;
