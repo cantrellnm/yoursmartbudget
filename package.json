@@ -1,0 +1,16 @@
+{
+  "name": "@cantrellnm/yoursmartbudget",
+  "private": true,
+  "version": "0.1.0",
+  "author": "cantrellnm",
+  "license": "MIT",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach -piv run dev",
+    "build": "yarn workspace client build",
+    "start": "yarn workspace server start"
+  }
+}
