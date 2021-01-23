@@ -21,13 +21,6 @@ const Planned = (props) => {
 
   const [update, setUpdate] = useState(false);
 
-  // openForm() {
-  //   this.setState({update: true});
-  // }
-  // closeForm() {
-  //   this.setState({update: false});
-  // }
-
   const updatePlanned = (values) => {
     API.post('/planned/update', { id, ...values })
     .then( data => {
