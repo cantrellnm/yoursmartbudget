@@ -30,16 +30,16 @@ const persistStorageConfig = {
 
 const persistStorageReducer = persistReducer(persistStorageConfig, rootReducer);
 
+let middleware = [
+  oidcMiddleware,
+  routerMiddleware(history),
+  thunk,
+];
+if (process.env.NODE_ENV !== 'production') middleware.push(loggerMiddleware);
+
 const store = createStore(
   persistStorageReducer,
-  compose(
-    applyMiddleware(
-      oidcMiddleware,
-      routerMiddleware(history),
-      thunk,
-      process.env.NODE_ENV === 'production' ? null : loggerMiddleware
-    )
-  )
+  compose(applyMiddleware(...middleware))
 );
 
 // loadUser(store, userManager);
