@@ -12,5 +12,8 @@
     "dev": "yarn workspaces foreach -piv run dev",
     "build": "yarn workspace client build",
     "start": "yarn workspace server start"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
