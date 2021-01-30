@@ -50,7 +50,7 @@ const PlannedDetail = (props) => {
     .then( data => {
       if (data && data.planned_transaction) {
         dispatch(actions.updatePlanned(data.planned_transaction));
-        let message = {type: 'success', time: Date.now(), message: `Planned transaction of ${data.planned_transaction.amount} to ${data.planned_transaction.payee} updated. `};
+        let message = {type: 'success', time: Date.now(), message: `Planned transaction of $${data.planned_transaction.amount} to ${data.planned_transaction.payee} updated. `};
         dispatch(actions.displayMessage(message));
       }
     });

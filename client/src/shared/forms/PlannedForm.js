@@ -51,16 +51,13 @@ const PlannedForm = (props) => {
 
   return (
     <Planned onSubmit={ submitForm }>
-      {(transaction.account) ? (
-        <input hidden required name="account" type="text" disabled value={ account } />
-      ) : (
-        <fieldset>
-          <div className="form-field">
-            <label htmlFor="account">Account</label>
-            <AccountSelect onChange={e => setAccount(e.target.value)} />
-          </div>
-        </fieldset>
-      )}
+      <fieldset>
+        <div className="form-field">
+          <label htmlFor="account">Account</label>
+          <AccountSelect value={ account } required={ true }
+            onChange={e => setAccount(e.target.value)} />
+        </div>
+      </fieldset>
       <fieldset>
         <div className="form-field">
           <label htmlFor="date">Date</label>
